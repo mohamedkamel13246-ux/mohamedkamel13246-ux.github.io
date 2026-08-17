@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>محمد كامل | كاتب محتوى للسوشيال ميديا</title>
+<style>
+:root{
+  --bg:#03070d;--panel:#09111c;--gold:#f4b82b;--gold2:#ffd45a;
+  --text:#f7f8fb;--muted:#aab3c2;--line:#5c4211;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Segoe UI",Tahoma,Arial,sans-serif;background:radial-gradient(circle at 75% 20%,#111b2b 0,#03070d 38%),#03070d;color:var(--text);line-height:1.8}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+nav{position:sticky;top:0;z-index:20;background:#03070de8;backdrop-filter:blur(14px);border-bottom:1px solid #182231}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:19px}
+.logo{font-family:Georgia,serif;font-size:32px;color:var(--gold)}
+.links{display:flex;gap:30px;color:#dbe1ea;font-size:15px}
+.links a{transition:.2s}.links a:hover{color:var(--gold)}
+.hero{min-height:620px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:35px;padding:65px 0}
+.hero h1{font-size:clamp(48px,7vw,88px);line-height:1.05;letter-spacing:-2px}
+.hero h1 span{color:var(--gold)}
+.hero h2{font-size:clamp(24px,3vw,36px);color:var(--gold);margin:18px 0 10px}
+.hero p{color:#d6dbe3;font-size:18px;max-width:620px}
+.buttons{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+.btn{padding:12px 25px;border:1px solid var(--gold);border-radius:12px;font-weight:700;transition:.25s}
+.btn.primary{background:var(--gold);color:#080c12}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px #f4b82b22}
+.visual{position:relative;min-height:390px;display:grid;place-items:center}
+.laptop{width:90%;height:230px;border:3px solid #5e6672;border-radius:18px;background:linear-gradient(135deg,#111c2d,#05080e);box-shadow:0 30px 80px #000}
+.laptop:after{content:"";display:block;width:115%;height:16px;background:#202a38;border-radius:50%;margin:215px -7.5% 0}
+.pen{position:absolute;right:30%;bottom:8%;width:22px;height:210px;background:linear-gradient(90deg,#777,#f7c63e,#222);border-radius:12px;transform:rotate(28deg);box-shadow:0 0 30px #f4b82b55}
+.note{position:absolute;bottom:1%;left:8%;width:55%;height:130px;background:#e9dfc8;border-radius:8px;transform:rotate(-4deg);box-shadow:0 18px 35px #0008}
+.note:before{content:"✍  أفكار • كلمات • إبداع";color:#29313d;font-size:20px;position:absolute;top:38px;right:30px}
+.bubble{position:absolute;border:1px solid var(--gold);border-radius:50%;padding:12px;color:var(--gold);font-weight:700}
+.b1{top:15%;right:8%}.b2{top:25%;left:0}.b3{bottom:27%;right:3%}
+.section{padding:55px 0}
+.section-title{text-align:center;font-size:34px;margin-bottom:30px}
+.section-title span{color:var(--gold)}
+.about,.contact{border:1px solid var(--line);background:linear-gradient(145deg,#080f19,#050a12);border-radius:24px;padding:34px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+.about h3{font-size:28px}.about p{color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+.stat{padding:17px;border-right:1px solid #493711}.stat b{color:var(--gold);font-size:18px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{background:linear-gradient(145deg,#0d1724,#070c13);border:1px solid #493711;border-radius:18px;padding:23px;min-height:190px}
+.icon{font-size:28px;color:var(--gold);margin-bottom:8px}.card h3{margin-bottom:8px}.card p{color:var(--muted);font-size:14px}
+.portfolio{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.work{overflow:hidden;border:1px solid #5a4210;border-radius:18px;background:#080e16}
+.work .pic{height:235px;padding:18px;display:flex;flex-direction:column;justify-content:space-between;font-weight:900;font-size:23px}
+.work .pic small{font-size:13px;font-weight:600}
+.cake{background:linear-gradient(160deg,#32170d,#b05b2a)} .urban{background:linear-gradient(160deg,#101a26,#31465c)}
+.burger{background:linear-gradient(160deg,#32130e,#a62d1b)} .fresh{background:linear-gradient(160deg,#16351d,#677a18)} .tech{background:linear-gradient(160deg,#06152a,#0a4b7a)}
+.work .info{padding:15px}.work .info h3{font-size:16px}.work .info p{color:var(--muted);font-size:13px;margin:3px 0 10px}
+.more{display:inline-block;border:1px solid #866314;color:var(--gold);padding:5px 12px;border-radius:8px;font-size:12px}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:center}
+.contact h2{font-size:30px}.phone{font-size:25px;color:var(--gold);font-weight:800;margin:8px 0}
+footer{text-align:center;padding:30px;color:#7e8999;border-top:1px solid #131d29;margin-top:30px}
+@media(max-width:900px){.hero,.about-grid,.contact{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,1fr)}.portfolio{grid-template-columns:repeat(2,1fr)}.visual{min-height:330px}}
+@media(max-width:600px){.links{display:none}.hero{padding:45px 0}.hero h1{font-size:52px}.cards,.portfolio,.stats{grid-template-columns:1fr}.laptop{width:95%}.note{width:65%}}
+
+/* Premium motion + project modal */
+.hero > div:first-child,.visual,.about,.card,.work,.contact{animation:rise .75s ease both}
+.card:nth-child(2),.work:nth-child(2){animation-delay:.08s}.card:nth-child(3),.work:nth-child(3){animation-delay:.16s}
+.card:nth-child(4),.work:nth-child(4){animation-delay:.24s}.work:nth-child(5){animation-delay:.32s}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.work{transition:.3s;cursor:pointer}.work:hover{transform:translateY(-7px);box-shadow:0 20px 45px #0008,0 0 0 1px #f4b82b55}
+.work .pic{transition:.3s}.work:hover .pic{filter:saturate(1.15)}
+.modal{position:fixed;inset:0;background:#000b;display:none;place-items:center;padding:20px;z-index:100}
+.modal.show{display:grid}
+.modal-box{width:min(650px,96%);background:#09111c;border:1px solid #80601b;border-radius:22px;padding:30px;box-shadow:0 25px 80px #000}
+.modal-box h2{color:#f4b82b;margin-bottom:8px}.modal-box p{color:#c0c8d4;margin:12px 0}
+.close{float:left;border:1px solid #80601b;background:none;color:#fff;border-radius:9px;padding:5px 11px;cursor:pointer}
+.notice{margin-top:12px;color:#8e99aa;font-size:12px}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container nav">
+    <a class="brand" href="#"><span class="logo">MK</span><span>محمد كامل</span></a>
+    <div class="links">
+      <a href="#home">الرئيسية</a><a href="#works">نماذج الأعمال</a><a href="#services">الخدمات</a><a href="#about">عني</a><a href="#contact">تواصل معي</a>
+    </div>
+  </div>
+</nav>
+
+<main id="home">
+<section class="hero container">
+  <div>
+    <h1>محمد <span>كامل</span></h1>
+    <h2>كاتب محتوى للسوشيال ميديا</h2>
+    <p>أكتب محتوى إعلاني يجذب الانتباه ويزيد التفاعل ويحوّل المتابعين إلى عملاء، بأسلوب بسيط ومقنع.</p>
+    <div class="buttons">
+      <a class="btn primary" href="https://wa.me/201101531896" target="_blank">تواصل عبر واتساب</a>
+      <a class="btn" href="#works">شوف أعمالي ↓</a>
+    </div>
+  </div>
+  <div class="visual" aria-label="تصميم بصري للكتابة وصناعة المحتوى">
+    <div class="laptop"></div><div class="note"></div><div class="pen"></div>
+    <div class="bubble b1">كلمة<br>تصل.. تؤثر<br>تبيع</div>
+    <div class="bubble b2">♥</div><div class="bubble b3">💬</div>
+  </div>
+</section>
+
+<section id="about" class="section container">
+  <div class="about">
+    <div class="about-grid">
+      <div><h3>عني</h3><p>طالب في الثانوية العامة وشغوف بالكتابة وصناعة المحتوى الإعلاني. أساعد البراندات والمشاريع الصغيرة على توصيل رسالتهم بشكل بسيط ومقنع يخلق تفاعلًا ويحقق نتائج.</p></div>
+      <div class="stats">
+        <div class="stat"><b>تسليم سريع</b><br><small>ملتزم بالمواعيد دائمًا</small></div>
+        <div class="stat"><b>أسلوب جذاب</b><br><small>كلمات تمس جمهورك</small></div>
+        <div class="stat"><b>تركيز على النتائج</b><br><small>محتوى يحقق هدفك الإعلاني</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section container">
+  <h2 class="section-title">الخدمات <span>✦</span></h2>
+  <div class="cards">
+    <div class="card"><div class="icon">💬</div><h3>سكريبتات ومنشورات ترويجية</h3><p>كتابة نصوص إبداعية للسوشيال ميديا والإعلانات.</p></div>
+    <div class="card"><div class="icon">📣</div><h3>محتوى إعلاني للحملات والعروض</h3><p>إعلانات قصيرة تبيع وتحقق نتائج ملموسة.</p></div>
+    <div class="card"><div class="icon">🛍️</div><h3>وصف منتجات لمتجر إلكتروني</h3><p>وصف احترافي يقنع العميل ويزيد المبيعات.</p></div>
+    <div class="card"><div class="icon">✎</div><h3>كتابة بوستات للسوشيال ميديا</h3><p>بوستات جذابة تزيد التفاعل وتخدم هدفك التسويقي.</p></div>
+  </div>
+</section>
+
+<section id="works" class="section container">
+  <h2 class="section-title">نماذج <span>أعمال</span></h2>
+  <div class="portfolio">
+    <article class="work" onclick="openProject(this)"> data-title="TechZone" data-desc="نموذج إعلاني لخدمة صيانة الكمبيوتر واللاب توب، يركز على مشكلة بطء الجهاز وفحصه قبل الإصلاح." data-title="Fresh Mix" data-desc="نموذج إعلان لعرض العصائر: اشترِ 2 واحصل على الثالث مجانًا، مع ربط المنتج بالجو والجمهور." data-title="Mega Burger" data-desc="نموذج إعلان لوجبة جديدة بسعر 150 جنيه ولمدة أسبوع، مع استخدام الفضول قبل كشف السعر." data-title="Urban Style" data-desc="نموذج إعلان لتشكيلة صيفية جديدة، موجه للشباب بأسلوب مباشر يركز على المشكلة والحل والمميزات." data-title="حلويات السعادة" data-desc="نموذج إعلان لعرض كيك لفترة محدودة، اعتمد على Hook جذاب وإحساس بالاستعجال مع دعوة واضحة للطلب."<div class="pic cake">حلويات<br>السعادة<small>عرض كيك لفترة محدودة</small></div><div class="info"><h3>حلويات السعادة</h3><p>عرض كيك</p><span class="more">عرض التفاصيل</span></div></article>
+    <article class="work" onclick="openProject(this)"><div class="pic urban">URBAN<br>STYLE<small>تشكيلة صيفية جديدة</small></div><div class="info"><h3>Urban Style</h3><p>تشكيلة ملابس</p><span class="more">عرض التفاصيل</span></div></article>
+    <article class="work" onclick="openProject(this)"><div class="pic burger">Mega<br>Burger<small>برجر + بطاطس + مشروب — 150 جنيه</small></div><div class="info"><h3>Mega Burger</h3><p>مطعم برجر</p><span class="more">عرض التفاصيل</span></div></article>
+    <article class="work" onclick="openProject(this)"><div class="pic fresh">Fresh Mix<small>مانجو + فراولة + موز — اشترِ 2 والثالث هدية</small></div><div class="info"><h3>Fresh Mix</h3><p>عرض العصائر</p><span class="more">عرض التفاصيل</span></div></article>
+    <article class="work" onclick="openProject(this)"><div class="pic tech">TechZone<small>صيانة أجهزة الكمبيوتر واللاب توب</small></div><div class="info"><h3>TechZone</h3><p>صيانة الكمبيوتر</p><span class="more">عرض التفاصيل</span></div></article>
+  </div>
+  <p style="text-align:center;color:#737f90;font-size:13px;margin-top:16px">* جميع نماذج الأعمال أعلاه نماذج تجريبية لعرض أسلوبي في الكتابة فقط.</p>
+</section>
+
+<section id="contact" class="section container">
+  <div class="contact">
+    <div><h2>جاهز نبدأ مع بعض؟</h2><p style="color:var(--muted)">تواصل معي الآن وخليّنا نحقق نتائج حقيقية لمشروعك.</p><div class="phone">01101531896</div><a class="btn primary" href="https://wa.me/201101531896" target="_blank">تواصل عبر واتساب</a></div>
+    <div><h2 style="color:var(--gold)">معلومات التواصل</h2><p>📞 01101531896</p><p>💬 راسلني على واتساب</p><p>⏱ متاح يوميًا من 10 ص إلى 10 م</p></div>
+  </div>
+</section>
+</main>
+<footer>© 2026 محمد كامل — كاتب محتوى للسوشيال ميديا</footer>
+
+<div class="modal" id="projectModal" onclick="closeProject(event)">
+  <div class="modal-box">
+    <button class="close" onclick="closeProject(event)">إغلاق</button>
+    <h2 id="modalTitle"></h2>
+    <p id="modalDesc"></p>
+    <div class="notice">نموذج تجريبي من أعمال الـPortfolio — الهدف منه عرض أسلوب الكتابة.</div>
+  </div>
+</div>
+<script>
+function openProject(card){
+  document.getElementById('modalTitle').textContent = card.dataset.title || '';
+  document.getElementById('modalDesc').textContent = card.dataset.desc || '';
+  document.getElementById('projectModal').classList.add('show');
+}
+function closeProject(e){
+  if(e.target.id === 'projectModal' || e.target.classList.contains('close'))
+    document.getElementById('projectModal').classList.remove('show');
+}
+document.addEventListener('keydown', e => {
+  if(e.key === 'Escape') document.getElementById('projectModal').classList.remove('show');
+});
+</script>
+</body>
+</html>
